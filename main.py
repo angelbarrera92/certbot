@@ -51,6 +51,7 @@ def find_existing_cert(domains):
 	iterator = paginator.paginate(PaginationConfig={'MaxItems':1000})
 
 	sans = set()
+	cert = None
 
 	for page in iterator:
 		for cert in page['CertificateSummaryList']:
