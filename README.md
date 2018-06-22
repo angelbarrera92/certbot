@@ -11,6 +11,8 @@ This bot is executed by reading certain environment variables to request the cer
 - `SENTRY_DSN` *(Optional)*: URL use to send process errors to Sentry.
 - `S3_BUCKET_NAME` *(Optional)*: S3 Bucket to upload the certificates. The keys should looks like S3_BUCKET_NAME/certbot/domain_name/domain_name.`crt`||`key`||`chain`.
 - `DAYS_TO_EXPIRE` *(Optional)*: Maximun number of days before certificates expire to renew the it. Default value: `30`.
+- `AWS_ACCESS_KEY_ID`: *(Required)* AWS access key.
+- `AWS_SECRET_ACCESS_KEY`: *(Required)* AWS secret key. Access and secret key variables override credentials stored in credential and config files.
 
 ## Execute on premises
 To run this script locally we must have several requirements:
