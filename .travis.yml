@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - '3.6'
+
+jobs:
+  include:
+    - stage: mygit.website
+      env:
+        - AWS_REGION=eu-central-1
+        - AWS_DEFAULT_REGION=eu-central-1
+        - LETSENCRYPT_DOMAINS=mygit.website,*.mygit.website
+        - LETSENCRYPT_EMAIL=angelbarrerasanchez@gmail.com
+      before_script:
+        - pip install certbot certbot-dns-route53 raven
+        - pip install idna\<2.7
+      script:
+        - python main.py
