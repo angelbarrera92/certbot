@@ -11,6 +11,7 @@ jobs:
         - AWS_DEFAULT_REGION=us-east-1
         - LETSENCRYPT_DOMAINS=mygit.website,*.mygit.website
         - LETSENCRYPT_EMAIL=angelbarrerasanchez@gmail.com
+        - S3_BUCKET_NAME=mygit.website.certbot
       before_script:
         - pip install certbot certbot-dns-route53 raven
         - pip install idna\<2.7
