@@ -50,6 +50,8 @@ def find_existing_cert(domains):
 	paginator = client.get_paginator('list_certificates')
 	iterator = paginator.paginate(PaginationConfig={'MaxItems':1000})
 
+	sans = set()
+
 	for page in iterator:
 		for cert in page['CertificateSummaryList']:
 			cert = client.describe_certificate(CertificateArn=cert['CertificateArn'])
