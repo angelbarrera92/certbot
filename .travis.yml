@@ -7,8 +7,8 @@ jobs:
   include:
     - stage: mygit.website
       env:
-        - AWS_REGION=eu-central-1
-        - AWS_DEFAULT_REGION=eu-central-1
+        - AWS_REGION=us-east-1
+        - AWS_DEFAULT_REGION=us-east-1
         - LETSENCRYPT_DOMAINS=mygit.website,*.mygit.website
         - LETSENCRYPT_EMAIL=angelbarrerasanchez@gmail.com
       before_script:
